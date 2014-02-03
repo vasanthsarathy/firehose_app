@@ -1,9 +1,7 @@
 class PicsController < ApplicationController
 
 	def index
-
 		@pics = Pic.all
-
 	end
 
 	def new
@@ -18,7 +16,7 @@ class PicsController < ApplicationController
 	private 
 
 	def pic_params
-		params.require(:pic).permit(:lesson, :emotion, :learned)
+		params.require(:pic).permit(:lesson, :emotion, :learned, :image)
 	end
 
 end
